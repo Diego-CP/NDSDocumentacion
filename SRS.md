@@ -220,7 +220,7 @@ This is a list of the user classes that will be available in the platform, along
 
 The P.O. stated that the product must be supported completely in a Cloud environment. Having said that, we opted to make use of _AWS_ to sustain this architecture:
 
-![](./ArchitectureDiagram.png)
+![](./Diagrams/ArchitectureDiagram.png)
 
 Starting on data management, our primary Database will be supported using Amazon RDS. This will be a relational database that holds important user information and vehicle registers that can be normalized properly. On the other hand, our second database on DynamoDB, will mostly hold car descriptions in .json format, as well as the corresponding route to the images of the different vehicles hosted on the platform. Static assets such as images and icons will be hosted upon the first S3 Bucket; a second bucket will be used (with stronger security measures) to store and make available the documents with sensitive information provided by the buyers, such as contracts.
 
