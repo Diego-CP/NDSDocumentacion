@@ -120,6 +120,8 @@
 
 [**8. Other Requirements**](#_heading=h.ihv636)
 
+[**9. Testing Plan**](#_test)
+
 [**Appendix A: Glossary**](#Appendix-A:-glossary)
 
 ---
@@ -1105,6 +1107,9 @@ The following consumer protection policies are to be considered for all the user
 5. Refunds and returns: The organization will have a clear policy regarding refunds and returns, including any applicable fees or restrictions, and will honor that policy in a timely manner.
 6. Advertising and marketing: The organization will not engage in false, misleading, or deceptive advertising or marketing practices, and will ensure that any claims or statements made about its products or services are truthful and supported by evidence.
 7. Contracts and agreements: The organization will use clear and understandable language in its contracts and agreements with customers, and will not include unfair or hidden terms or conditions.
+
+# 9. Testing Plan
+If you wish to see the way in which we will handle tests, plase check the following [Testing Plan](./TestingPlan.md).
 
 # Appendix A: Glossary
 
