@@ -56,7 +56,7 @@ All additional documents used for the creation of this testing plan.
 
 **Table of Contents**
 
-[**1. Introduction**](#_mtbf6ltufj30)
+[**1. Introduction**](#1.-Introduction)
 
 [1.1. Purpose](#_ljbfzhtk1w0n)
 
@@ -383,8 +383,7 @@ Super Administrators and above:
 | --- | --- | --- | --- | --- |
 | 1 | Test Plan | Test Team | 1 | Project Manager |
 | 2 | Unit Test Cases | Test Team | 3 | Project Manager |
-| 3
- | Integration Test Cases | Test TeamTest Team | 3 | Project ManagerProject Manager |
+| 3 | Integration Test Cases | Test TeamTest Team | 3 | Project ManagerProject Manager |
 | 4 | Technical Review | Test Team | Every sprint after the 3rd. | Project Manager/Test Team |
 | 5 | Logs of Test Results | Test Team | Evert sprint after the third. | Project Manager/Test Team |
 | 6 | Weekly status report | Test Team | Every sprint after the third. | Project Manager/Test Team |
@@ -415,8 +414,7 @@ This List is tentative and may be subject to change:
 | 15 | Integration Test | Car purchasing/driving test integration test: Can reserve a driving test and buy a car | Finished unit tests: 1,12,14 |
 | 16 | Unit Test | Model Upload Test | Finished model upload module |
 | 17 | Integration Test | Model Upload Unit Test: Can Upload a car and it will be reflected in the DB, car search feature | Finished Unit tests. 1.12.14.16 |
-|
- | Unit Test | Document Validation Unit Test: Can upload documents and receive a boolean indicating validity | Finished Document Validation Module |
+|| Unit Test | Document Validation Unit Test: Can upload documents and receive a boolean indicating validity | Finished Document Validation Module |
 | 18 | Validation Testing | It has minimum changes or none.Interface is up to client standards. | Interface Design Complete |
 | 19 | Validation Testing | It has minimum changes or none. Software is complete and works up to client's standards | Software is completed |
 | 20 | Route Testing | Flow of the all users is able to be completed | Complete DB Complete API Complete Cloud Architecture Complete Connections Complete Front-end Implementation Complete Back-end implementation |
