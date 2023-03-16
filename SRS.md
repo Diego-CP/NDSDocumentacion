@@ -183,39 +183,44 @@ The purpose of this project is to serve as an entirely new product that will be 
 
 This is a list of the user classes that will be available in the platform, along with their general characteristics. For a more detailed description, see their corresponding section in "2.6 Use Cases".
 
-1. Super Admin:
+**1. Super Admin:**
   1. Complete access to all account data and account alteration privileges
   2. Grants/denies Admin access to auto group accounts
   3. Can create and delete accounts
   4. Can change the amount of commissions charged to an Admin's auto group
   5. Access to system-wide statistical data
   6. Has access to Registered User privileges
-2. Admin:
+  
+**2. Admin:**
   1. Registers/unregisters agencies in its auto group
   2. Assigns/deallocates Manager to its registered agencies
   3. Access to statistical data of its whole auto group
   4. Has access to all Manager privileges
-3. Manager:
+  
+**3. Manager:**
   1. Assigns/deallocates Seller to its agency
   2. Can submit car inventory
   3. Can access and alter car data
   4. Access to statistical data of its agency
   5. Has access to all Seller privileges
-4. Seller:
+  
+**4. Seller:**
   1. Can provide chat support to Registered User
   2. Has access to all Registered User privileges
-5. Registered User:
+  
+**5. Registered User:**
   1. Can Log-in
   2. Can be assigned a higher-privilege user class
   3. Can alter personal information: e-mail, documents, password, etc..
   4. Can schedule a driving test
   5. Can purchase a car
   6. Has access to all Unregistered User privileges
-6. Unregistered User:
+  
+**6. Unregistered User:**
   1. Can browse and filter cars
   2. Can create a personal account
 
-  1.
+  
 ## Operating Environment
 
 The P.O. stated that the product must be supported completely in a Cloud environment. Having said that, we opted to make use of _AWS_ to sustain this architecture:
