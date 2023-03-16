@@ -1,123 +1,127 @@
 # **Software Requirements Specification**
 
-#
-**## for**
+# **for**
 
 # **AutoMart**
 
-**Version**  **2****.0 approved**
+**Version 3.0 approved**
 
-**Prepared by**  **Andrew Dunkerley, Emiliano Cabrera, Do Hyun Nam, Andrés Briseño and Diego Corrales**
+**Prepared by Andrew Dunkerley, Emiliano Cabrera, Do Hyun Nam, Andrés Briseño and Diego Corrales**
 
 **33 VLANs Studio**
 
 **09/03/23**
 
-**Table of Contents**
+---
 
-[**1. Introduction 1**](#_heading=h.1fob9te)
+# Table of Contents
 
-[1.1 Purpose 1](#_heading=h.2et92p0)
+[**1. Introduction**](#1.-introduction)
 
-[1.2 Document Conventions 1](#_heading=h.tyjcwt)
+[1.1 Purpose](#_heading=h.2et92p0)
 
-[1.3 Project Scope 1](#_heading=h.3dy6vkm)
+[1.2 Document Conventions](#_heading=h.tyjcwt)
 
-[1.4 References 1](#_heading=h.1t3h5sf)
+[1.3 Project Scope](#_heading=h.3dy6vkm)
 
-[**2. Overall Description 2**](#_heading=h.4d34og8)
+[1.4 References](#_heading=h.1t3h5sf)
 
-[2.1 Product Perspective 2](#_heading=h.2s8eyo1)
+[**2. Overall Description**](#_heading=h.4d34og8)
 
-[2.2 User Classes and Characteristics 3](#_heading=h.kd4tzmw79q8e)
+[2.1 Product Perspective](#_heading=h.2s8eyo1)
 
-[2.3 Operating Environment 4](#_heading=h.3rdcrjn)
+[2.2 User Classes and Characteristics](#_heading=h.kd4tzmw79q8e)
 
-[2.4 Design and Implementation Constraints 5](#_heading=h.26in1rg)
+[2.3 Operating Environment](#_heading=h.3rdcrjn)
 
-[2.5 Assumptions and Dependencies 5](#_heading=h.lnxbz9)
+[2.4 Design and Implementation Constraints](#_heading=h.26in1rg)
 
-[2.6 Use Cases 6](#_heading=h.2qvrntrsr9pi)
+[2.5 Assumptions and Dependencies](#_heading=h.lnxbz9)
 
-[2.6.1 General Cases 6](#_heading=h.4m2dvesqfkim)
+[2.6 Use Cases](#_heading=h.2qvrntrsr9pi)
 
-[2.6.2 Client Cases 8](#_heading=h.s2lnvlc4s857)
+[2.6.1 General Cases](#_heading=h.4m2dvesqfkim)
 
-[2.6.3 Superadmin cases 12](#_heading=h.r9sg8m4jcm2x)
+[2.6.2 Client Cases](#_heading=h.s2lnvlc4s857)
 
-[2.6.4 Administrator Cases 16](#_heading=h.g8j5dqisvwrt)
+[2.6.3 Superadmin cases](#_heading=h.r9sg8m4jcm2x)
 
-[2.6.5 Manager Cases 19](#_heading=h.nm0t2vlm13v1)
+[2.6.4 Administrator Cases](#_heading=h.g8j5dqisvwrt)
 
-[2.6.6 Seller Cases 21](#_heading=h.se5l767zf3th)
+[2.6.5 Manager Cases](#_heading=h.nm0t2vlm13v1)
 
-[**3. System Features 23**](#_heading=h.35nkun2)
+[2.6.6 Seller Cases](#_heading=h.se5l767zf3th)
 
-[3.1 Landing page 23](#_heading=h.stqrjt3pqsj3)
+[**3. System Features**](#_heading=h.35nkun2)
 
-[3.2 User registration and login 23](#_heading=h.4m60d0jt73al)
+[3.1 Landing page](#_heading=h.stqrjt3pqsj3)
 
-[3.3 Car search 24](#_heading=h.9hh8avz8j13u)
+[3.2 User registration and login](#_heading=h.4m60d0jt73al)
 
-[3.4 Car's page 25](#_heading=h.1j860qy2qhml)
+[3.3 Car search](#_heading=h.9hh8avz8j13u)
 
-[3.5 Testing and Purchasing a Car 25](#_heading=h.nyllo0xevkic)
+[3.4 Car's page](#_heading=h.1j860qy2qhml)
 
-[3.6 Changing Account Information 26](#_heading=h.eom3lwuo5jba)
+[3.5 Testing and Purchasing a Car](#_heading=h.nyllo0xevkic)
 
-[3.7 Customer Support 26](#_heading=h.ri0cxm2kse4u)
+[3.6 Changing Account Information](#_heading=h.eom3lwuo5jba)
 
-[3.8 Auto Group Requests 26](#_heading=h.s7o5eyfpjtfr)
+[3.7 Customer Support](#_heading=h.ri0cxm2kse4u)
 
-[3.9 Agency Creation 26](#_heading=h.okuakmf8netp)
+[3.8 Auto Group Requests](#_heading=h.s7o5eyfpjtfr)
 
-[3.10 Inventory Management 26](#_heading=h.zbibgt51xdj4)
+[3.9 Agency Creation](#_heading=h.okuakmf8netp)
 
-[3.11 Superadmin Features 27](#_heading=h.us4bqnumt86t)
+[3.10 Inventory Management](#_heading=h.zbibgt51xdj4)
 
-[3.12 Admin Features 27](#_heading=h.lxs8yq3d8sjx)
+[3.11 Superadmin Features](#_heading=h.us4bqnumt86t)
 
-[3.13 Manager Features 27](#_heading=h.qececkhn8gr3)
+[3.12 Admin Features](#_heading=h.lxs8yq3d8sjx)
 
-[3.14](#_heading=h.g6pc57o03j84)[Seller](#_heading=h.g6pc57o03j84)[Features 27](#_heading=h.g6pc57o03j84)
+[3.13 Manager Features](#_heading=h.qececkhn8gr3)
 
-[3.15 Security 27](#_heading=h.7wcn7egrrymg)
+[3.14 Seller Features](#_heading=h.g6pc57o03j84)
 
-[3.16 Non Functional Features 27](#_heading=h.v1vs9fw9q108)
+[3.15 Security](#_heading=h.7wcn7egrrymg)
 
-[**4. Data Requirements 29**](#_heading=h.2jxsxqh)
+[3.16 Non Functional Features](#_heading=h.v1vs9fw9q108)
 
-[4.1 Logical Data Model 29](#_heading=h.z337ya)
+[**4. Data Requirements**](#4.-data-requirements)
 
-[4.2 Data Dictionary 29](#_heading=h.3j2qqm3)
+[4.1 Logical Data Model](#_heading=h.z337ya)
 
-[4.3 Reports 29](#_heading=h.1y810tw)
+[4.2 Data Dictionary](#_heading=h.3j2qqm3)
 
-[4.4 Data Acquisition, Integrity, Retention, and Disposal 30](#_heading=h.4i7ojhp)
+[4.3 Reports](#_heading=h.1y810tw)
 
-[**5. External Interface Requirements 30**](#_heading=h.2xcytpi)
+[4.4 Data Acquisition, Integrity, Retention, and Disposal](#_heading=h.4i7ojhp)
 
-[5.1 User Interfaces 30](#_heading=h.1ci93xb)
+[**5. External Interface Requirements**](#_heading=h.2xcytpi)
 
-[5.2 Software Interfaces 30](#_heading=h.3whwml4)
+[5.1 User Interfaces](#_heading=h.1ci93xb)
 
-[5.3 Hardware Interfaces 30](#_heading=h.2bn6wsx)
+[5.2 Software Interfaces](#_heading=h.3whwml4)
 
-[5.4 Communications Interfaces 31](#_heading=h.qsh70q)
+[5.3 Hardware Interfaces](#_heading=h.2bn6wsx)
 
-[**6. Quality Attributes 31**](#_heading=h.3as4poj)
+[5.4 Communications Interfaces](#_heading=h.qsh70q)
 
-[6.1 Usability 31](#_heading=h.1pxezwc)
+[**6. Quality Attributes**](#_heading=h.3as4poj)
 
-[6.2 Performance 31](#_heading=h.49x2ik5)
+[6.1 Usability](#_heading=h.1pxezwc)
 
-[6.3 Security 31](#_heading=h.2p2csry)
+[6.2 Performance](#_heading=h.49x2ik5)
 
-[6.4 Safety 32](#_heading=h.147n2zr)
+[6.3 Security](#_heading=h.2p2csry)
 
-[**7. Internationalization and Localization Requirements 32**](#_heading=h.23ckvvd)
+[6.4 Safety](#_heading=h.147n2zr)
 
-[**8. Other Requirements 32**](#_heading=h.ihv636)
+[**7. Internationalization and Localization Requirements**](#_heading=h.23ckvvd)
+
+[**8. Other Requirements**](#_heading=h.ihv636)
+
+[**Appendix A: Glossary**]()
+---
 
 **Revision History**
 
@@ -126,6 +130,8 @@
 | SRS 1.0 | 20/02/23 | Filled Introduction section. | 1.0 |
 | SRS 2.0 | 06/03/23 | Filled up to the Features section. | 2.0 |
 | SRS 3.0 | 09/03/23 | First completed SRS. | 3.0 |
+
+---
 
 # 1. Introduction
 
@@ -213,7 +219,7 @@ This is a list of the user classes that will be available in the platform, along
 
 The P.O. stated that the product must be supported completely in a Cloud environment. Having said that, we opted to make use of _AWS_ to sustain this architecture:
 
-![](./Imgs/img2.png)
+![](./ArchitectureDiagram.png)
 
 Starting on data management, our primary Database will be supported using Amazon RDS. This will be a relational database that holds important user information and vehicle registers that can be normalized properly. On the other hand, our second database on DynamoDB, will mostly hold car descriptions in .json format, as well as the corresponding route to the images of the different vehicles hosted on the platform. Static assets such as images and icons will be hosted upon the first S3 Bucket; a second bucket will be used (with stronger security measures) to store and make available the documents with sensitive information provided by the buyers, such as contracts.
 
@@ -1019,7 +1025,7 @@ The main idea of this section is to provide a general description of how the sof
 1. [Superadmin diagram](./Diagrams/Flow%20Diagrams/Super%20Admin.drawio.png)
 2. [Admin diagram](./Diagrams/Flow%20Diagrams/Admin.drawio.png)
 3. [Manager diagram](./Diagrams/Flow%20Diagrams/Gerente.drawio.png)
-4. [Seller diagram](https://drive.google.com/file/d/127vmgbI5vvyeGEJJxQ7c-1BtpmaVmL2I/view?usp=sharing)
+4. [Seller diagram](./Diagrams/Flow%20Diagrams/Salesman.drawio.png)
 5. [Final User diagram](./Diagrams/Flow%20Diagrams/Final%20User.drawio.png)
 
 ## 5.2 Software Interfaces
@@ -1070,19 +1076,19 @@ So far the platform is meant to be deployed only in Mexico, which removes any ne
 
 # 8. Recorrido ther Requirements and Regulations
 
-**8.1 Accessing the platform**
+ ## 8.1 Accessing the platform
 
 For the user to access the web page, they should have any electronic device that has a usable, commercially available browser with access to internet connection. Additionally, it is imperative that the connection should come from a Mexican IP address, as the service is only available in said country for the time being.
 
-**8.2. Logging in and out**
+## 8.2. Logging in and out
 
 The users should create and remember the credentials they are to use, complying with the security requirements set beforehand. The failure to do so will result in the user being denied access to the key functionality of the software. Additionally, users should have cookies and cache habilitated to improve the user experience overall, but not indispensable for the correct usage of it.
 
-**8.3 Data management regulations**
+## 8.3 Data management regulations
 
 All the data retrieved and stored over the database and buckets are solely to be used to provide a personalized and adequate service to the users. By any means they are meant to be leaked or used for other purposes than the ones established on the functional requirements and complying with the security requirements. The data provided by the users are to be protected by the Mexican laws and regulations.
 
-**8.4 Consumer protection**
+## 8.4 Consumer protection
 
 The following consumer protection policies are to be considered for all the users purchasing from the platform.
 
@@ -1094,7 +1100,7 @@ The following consumer protection policies are to be considered for all the user
 6. Advertising and marketing: The organization will not engage in false, misleading, or deceptive advertising or marketing practices, and will ensure that any claims or statements made about its products or services are truthful and supported by evidence.
 7. Contracts and agreements: The organization will use clear and understandable language in its contracts and agreements with customers, and will not include unfair or hidden terms or conditions.
 
-**Appendix A: Glossary**
+# Appendix A: Glossary
 
 API: An Application Programming Interface is a set of protocols, routines, and tools for building software and applications.
 
@@ -1144,10 +1150,6 @@ Subnet: A subdivision of a network used to isolate devices and control traffic f
 
 Ubuntu: A popular open-source operating system based on Debian.
 
-Virtual Private Cloud: A virtual network environment that enables a user to launch resources in a logically isolated section of the AWS cloud.
-
-**Appendix B: Analysis Models**
-
-_\<This optional section includes or points to pertinent analysis models such as data flow diagrams, feature trees, state-transition diagrams, or entity-relationship diagrams. You might prefer to insert certain models into the relevant sections of the specification instead of collecting them at the end.\>_
+Virtual Private Cloud: A virtual network environment that enables a user to launch resources in a logically isolated section of the cloud.
 
 _ **Copyright © 2013 by Karl Wiegers and Seilevel. Permission is granted to use and modify this document.** _
