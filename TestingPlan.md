@@ -44,8 +44,7 @@ All additional documents used for the creation of this testing plan.
 
 | **Version** | **Date** | **Document Name** |
 | --- | --- | --- |
-| 1.0 | 12/03/2023 | Software Requirements Specification
- |
+| 1.0 | 12/03/2023 | Software Requirements Specification |
 | 1.0 | 08/03/2023 | Risk Definition |
 | 1.0 | 08/03/2023 | Effort and Margin Analysis |
 | 1.0 | 07/03/2023 | WBS |
