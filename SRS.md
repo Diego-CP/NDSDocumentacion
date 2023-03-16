@@ -120,7 +120,8 @@
 
 [**8. Other Requirements**](#_heading=h.ihv636)
 
-[**Appendix A: Glossary**]()
+[**Appendix A: Glossary**](#Appendix-A:-glossary)
+
 ---
 
 **Revision History**
