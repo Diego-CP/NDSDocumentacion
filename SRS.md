@@ -127,23 +127,19 @@
 | SRS 2.0 | 06/03/23 | Filled up to the Features section. | 2.0 |
 | SRS 3.0 | 09/03/23 | First completed SRS. | 3.0 |
 
-1.
-# Introduction
+# 1. Introduction
 
 The purpose of this document is to give a complete and succinct overview of **AutoMart** software system by analyzing its different components and the problem that it's trying to solve. By default, this document also holds the different requirements stated by the P.O. and the needs that need to be solved in a high level manner. As such, all the requirements of the software system **AutoMart** are stated in this document.
 
-  1.
-## Purpose
+## 1.1 Purpose
 
 The main purpose of this document is to explain in detail the requirements of the software system and a brief explanation that helps with their understanding. Nonetheless, it also describes the general view of the finished product that the P.O. has, where we will also mention future ideas to be developed and document those which may be discarded during development. Since this document is intended to be read by developers and designers in order to establish a concrete baseline from which the product will be developed.
 
-  1.
-## Document Conventions
+## 1.2 Document Conventions
 
 Requirements are listed numerically in a rough logical order by which will be encountered by a user first. These requirements are also subdivided by the general functionality or behavior they are related to.
 
-  1.
-## Project Scope
+## 1.3 Project Scope
 
 The scope of this project is to build an online, responsive, and scalable web car marketplace that provides its customers with the ability to easily search, filter, find, test and buy a car that suits their needs. Due to the laws and applicatbleregulations of the country that the product will be deployed on, all payments must be handled externally. Within its multiple features, the project must be able to provide its users with a seamless experience throughout the entire application including processes like: document digitization and processing, test drive requests, car filtering and specification detailing, account management, etc…
 
@@ -154,8 +150,7 @@ The stakeholders of this project are:
 - Tec de Monterrey: The institution by which the client is working with the development team.
 - Final users of the project, which are limited to Mexico.
 
-  1.
-## References
+## 1.4 References
 
 IEEE. _ISO/IEC/IEEE 29148:2011,__Systems and software engineering - Life cycle processes -_
 
@@ -163,23 +158,21 @@ _Requirements engineering_. IEEE Computer Society, 2011.
 
 https://www.iso.org/standard/45171.html
 
-1.
-# Overall Description
+# 2. Overall Description
 
 This document contains the current established requirements based on the user stories that were summarized from multiple discussions and sources with the P.O. Having said that, the general consensus is that the product will be mostly used by customers that are interested in acquiring a vehicle without having the need to go somewhere in person to do so. Apart from that, there will also be users in charge of managing the different sales and fluctuations of the market. With this, a known constraint is that the user must first pass a verification test in order to be able to purchase vehicles in order to comply with the laws and regulations of the country of deployment. It is also heavily dependent on the use of open-source tools and micro services since the budget provided for this product will be very low.
 
-  1.
-## Product Perspective
+## 2.1 Product Perspective
 
 The purpose of this project is to serve as an entirely new product that will be used as a prototype for NDS, in order to aid in their development of an already existing product. This software has the same purpose of that existing product: to generate online transactions of vehicles while competing with other existing services; but is intended as a proof of concept for any new implementation methods that 33 VLANs Studio follows in its creation. Thus, the P.O. has given the development team almost complete liberty in the choice of software and architecture to be used.
 
-![Shape1](RackMultipart20230311-1-8684rr_html_71fd7ab879b99976.gif)
+![Shape1](./Imgs/img1.png)
 
 ##
 
 
-  1.
-## User Classes and Characteristics
+
+## 2.2 User Classes and Characteristics
 
 This is a list of the user classes that will be available in the platform, along with their general characteristics. For a more detailed description, see their corresponding section in "2.6 Use Cases".
 
@@ -220,7 +213,7 @@ This is a list of the user classes that will be available in the platform, along
 
 The P.O. stated that the product must be supported completely in a Cloud environment. Having said that, we opted to make use of _AWS_ to sustain this architecture:
 
-![](RackMultipart20230311-1-8684rr_html_fa4d06c6c26ba846.png)
+![](./Imgs/img2.png)
 
 Starting on data management, our primary Database will be supported using Amazon RDS. This will be a relational database that holds important user information and vehicle registers that can be normalized properly. On the other hand, our second database on DynamoDB, will mostly hold car descriptions in .json format, as well as the corresponding route to the images of the different vehicles hosted on the platform. Static assets such as images and icons will be hosted upon the first S3 Bucket; a second bucket will be used (with stronger security measures) to store and make available the documents with sensitive information provided by the buyers, such as contracts.
 
@@ -234,8 +227,7 @@ All these subnets and balances are placed under a virtual private cloud (VPC), w
 
 The designated cloud infrastructure is set on the Northern California region, which has three availability zones and is the closest to Mexico. Additionally, each EC2 instance shall be run in Debian or Ubuntu, at mercy of the developers.
 
-  1.
-## Design and Implementation Constraints
+## 2.4 Design and Implementation Constraints
 
 The P.O. has not established any explicit constraints on the tools used for development, since this project is meant to function purely as a proof of concept for different implementations of an existing application. Therefore, the only constraints are those posed by the available resources.
 
@@ -243,8 +235,7 @@ This project will not receive external funding. The possibility of implementing 
 
 It is also important to note that the developing team is composed of aspiring software developers, with non-expert knowledge on formal design and implementation methods. As it comes, the developers' main focus will be on the correct functionality and user-friendliness of the software.
 
-  1.
-## Assumptions and Dependencies
+## 2.5 Assumptions and Dependencies
 
 The assumptions made for the development of this project are:
 
@@ -254,11 +245,9 @@ The assumptions made for the development of this project are:
 4. Neither NDS nor Tec de Monterrey will provide any funding for the development.
 5. The project scope will not change once the P.O. has approved the stated scope.
 
-  1.
-## Use Cases
+## 2.6 Use Cases
 
-    1.
-**General**
+**2.6.1 General**
 
 | Name of Use Case: | Sign-up |
 | --- | --- |
@@ -290,7 +279,7 @@ The assumptions made for the development of this project are:
 | **Exceptions:** | 4. In step 4 of the normal flow, as well as in step 2 of the first alternate flow, in case the user enters the wrong sign in details, the user is never redirected to their homepage and is instead prompted to try again. |
 | **Requirements:** | The following requirements must be met before execution of the use case1. The user must have a stable internet connection.2. The user must input a valid email address and corresponding password. |
 
-**Client**
+**2.6.2 Client**
 
 | Name of Use Case: | Buying a car as a client |
 | --- | --- |
@@ -352,7 +341,7 @@ The assumptions made for the development of this project are:
 | **Exceptions:** | 1. In step 1 of the normal flow in case the client has no account, they cannot access their "Settings". |
 | **Requirements:** | The following requirements must be met before execution of the use case1. The client must have a stable internet connection. |
 
-**Superadmin**
+**2.6.3 Superadmin**
 
 | Name of Use Case: | Handling Auto Group creation requests as a superadmin |
 | --- | --- |
@@ -504,7 +493,7 @@ The assumptions made for the development of this project are:
 | **Exceptions:** | - |
 | **Requirements:** | The following requirements must be met before execution of the use case1. The superadmin must have a stable internet connection. |
 
-**Administrators**
+**2.6.4 Administrators**
 
 | Name of Use Case: | Assign Manager accounts as an administrator |
 | --- | --- |
@@ -596,7 +585,7 @@ The assumptions made for the development of this project are:
 | **Exceptions:** | - |
 | **Requirements:** | The following requirements must be met before execution of the use case1. The admin must have a stable internet connection. |
 
-**Managers**
+**2.6.5 Managers**
 
 | Name of Use Case: | View an Agency's inventory as a manager |
 | --- | --- |
@@ -688,7 +677,7 @@ The assumptions made for the development of this project are:
 | **Exceptions:** | - |
 | **Requirements:** | The following requirements must be met before execution of the use case1. The manager must have a stable internet connection. |
 
-**Sellers**
+**2.6.6 Sellers**
 
 | Name of Use Case: | View ongoing sales as a seller |
 | --- | --- |
@@ -722,9 +711,7 @@ The assumptions made for the development of this project are:
 
 #
 
-
-1.
-# System Features
+# 3. System Features
 
 ## 3.1 Landing page
 
@@ -999,51 +986,43 @@ The assumptions made for the development of this project are:
 #
 
 
-1.
-# Data Requirements
+# 4. Data Requirements
 
-  1.
-## Logical Data Model
+## 4.1 Logical Data Model
 
-![](RackMultipart20230311-1-8684rr_html_acada143ca18a66e.png)
+![](./Imgs/img2.png)
 
-  1.
-## Data Dictionary
+## 4.2 Data Dictionary
 
 _\<The data dictionary defines the composition of data structures and the meaning, data type, length, format, and allowed values for the data elements that make up those structures. In many cases, you're better off storing the data dictionary as a separate artifact, rather than embedding it in the middle of an SRS. That also increases its reusability potential in other projects.\>_
 
 The data structures, data types, length format are indicated within the entity-relationship diagram.
 
-  1.
-## Reports
+## 4.3 Reports
 
 - **Audit log** : this will include a log of the user, salesman, manager and owner actions in case there is conflict within an organization and transparency is needed, or also if there's an error happening with the CRUD actions and the developers need a reference what may have caused the error. This will include the timestamp, user, action type and action description.
 - **Sales log** : this will be used to have evidence of when a car sale has been completed, started progress, or is in another state. This will include the timestamp, the user, the salesman and the sales state.
 
-  1.
-## Data Acquisition, Integrity, Retention, and Disposal
+## 4.4 Data Acquisition, Integrity, Retention, and Disposal
 
 As seen in our architecture, we're using Amazon RDS and DynamoDB, which can be configured to create periodic backups, so that will be used to protect the integrity of the user's data. Also, the user verification tools we'll use, have systems in place made to verify that the inputs correspond to the correct users and sessions.
 
 #
 
 
-1.
-# External Interface Requirements
+# 5. External Interface Requirements
 
-  1.
-## User Interfaces
+## 5.1 User Interfaces
 
 The main idea of this section is to provide a general description of how the software system will flow and how the different users will interact with it. Therefore, multiple have been done in order to provide a more accurate insight:
 
-1. [Superadmin diagram](https://drive.google.com/file/d/1ledah2j3ZdImMMKeqluW4e597s-22dmx/view?usp=sharing)
-2. [Admin diagram](https://drive.google.com/file/d/1RLeYTbgIxSePp5eTV6xeCEbsiPRPBrf7/view?usp=sharing)
-3. [Manager diagram](https://drive.google.com/file/d/1NVQ9PL2iyEjsGz0_GuUbdGqSYYdv55NG/view?usp=sharing)
+1. [Superadmin diagram](./Diagrams/Flow%20Diagrams/Super%20Admin.drawio.png)
+2. [Admin diagram](./Diagrams/Flow%20Diagrams/Admin.drawio.png)
+3. [Manager diagram](./Diagrams/Flow%20Diagrams/Gerente.drawio.png)
 4. [Seller diagram](https://drive.google.com/file/d/127vmgbI5vvyeGEJJxQ7c-1BtpmaVmL2I/view?usp=sharing)
-5. [Final User diagram](https://drive.google.com/file/d/1SEgcJulV1oRvcOyftGRHJbqT00VPjxfk/view?usp=sharing)
+5. [Final User diagram](./Diagrams/Flow%20Diagrams/Final%20User.drawio.png)
 
-  1.
-## Software Interfaces
+## 5.2 Software Interfaces
 
 This entire system will be supported by the architecture described in the section: \<2.3 Operating Environment\> The idea is for the Web Application (Version 1) to be stored in one of the EC2 instances that will be dedicated to the front end of the system. Apart from this, the entire application will be based on 2 databases that each will be stored in independent EC2 instances. Unfortunately, at this time, we cannot estimate the response time of the application since no development has been done. However, the multiple servers and systems of Amazon Cloud guarantee disponibility with very high certainty. Apart from this, the system will be protected against DDOS attacks with AWS Shield, and data security will be aided by AWS Web App Firewall. Additionally, the bulk of AI implementation will be handled by Amazon Sagemaker. On another note,, the system will need to connect to an external API that validates the integrity of final user documentation:
 
@@ -1052,21 +1031,17 @@ This entire system will be supported by the architecture described in the sectio
 
 Since users will be able to authenticate themselves with their Google credentials, the utilization of AWS IAM is guaranteed.
 
-  1.
-## Hardware Interfaces
+## 5.3 Hardware Interfaces
 
 The System will run on a Cloud Environment, therefore, all hardware must require a stable connection to the internet using any preferred means.
 
-  1.
-## Communications Interfaces
+## 5.4 Communications Interfaces
 
 The system will make use of the HTTP protocol for communication.
 
-1.
-# Quality Attributes
+# 6. Quality Attributes
 
-  1.
-## Usability
+## 6.1 Usability
 
 Given that AutoMart is a client-focused platform, it is necessary that any client is capable of navigating it with ease without the need to undergo a lengthy and tedious tutorial. Proper presentation of information is important, as is a proper representation of where to find it and an uncluttered design that facilitates processing stimuli.
 
@@ -1076,28 +1051,24 @@ Within product details, similarly to other online shopping websites, the design 
 
 Buttons will have a simple design with little text, one or two words at most, that gives as much description on the action they initiate. Examples are: "Accept", "Upload", and "Contact Seller". Follow up prompts, notifications or windows will be opened as a result and will give instructions on how to use them and if any inputs are needed.
 
-  1.
-## Performance
+## 6.2 Performance
 
 AutoMart as a product works as a web page, meaning that performance will be affected by incoming traffic to the site. Responses might be slow depending on what part of the site is receiving traffic, particularly product details as those send images back so that clients can preview cars. Reducing image sizes will be an important part of making sure the site runs smoothly.
 
-  1.
-## Security
+## 6.3 Security
 
 It is necessary for there to be different access levels to ensure employees cannot view information they are not allowed to. The existence of Superadmins ensures that Auto Groups have to be validated by someone prior to conducting business, admins ensure that managers can only view details about their corresponding Agencies, whereas managers themselves prevent sellers from handling delicate data from the Agency. This is accomplished by adding login credentials tied to the aforementioned access levels.
 
-  1.
-## Safety
+## 6.4 Safety
 
 AutoMart is being developed as a cloud-based implementation, which removes any need for server upkeep and maintenance by either the client or the developers. The databases are made to be secure, having Superadmin access only to ensure privacy, as well as a separate portal that allows these Superadmins to view any account's data in a digestible and easy way.
 
-1.
-# Internationalization and Localization Requirements
+# 7. Internationalization and Localization Requirements
 
 So far the platform is meant to be deployed only in Mexico, which removes any need for internationalization or localization. The language in which the software is to be developed is in Spanish.
 
-1.
-# ORecorrido ther Requirements and Regulations
+
+# 8. Recorrido ther Requirements and Regulations
 
 **8.1 Accessing the platform**
 
