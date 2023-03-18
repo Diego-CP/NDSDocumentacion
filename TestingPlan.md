@@ -440,7 +440,6 @@ This List is tentative and may be subject to change:
 | 9 | Assign collaborators | 10 MD |
 | 10 | Document validation | 14 MD |
 | **CRITICAL FUNCTIONALITY TESTING** | Total | 126 MD |
-|
 | 1 | Test plan creation | 16 MD |
 | 2 | Inspection | 28 MD |
 | **OTHER TESTING ACTIVITIES** | Total | 44 MD |
