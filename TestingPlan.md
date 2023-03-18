@@ -521,9 +521,7 @@ The communication strategy, per every role, is the following:
 
 ## 3.4 Gantt Chart
 
-![](./Imgs/gantt1.png)
-
-![](./Imgs/gantt2.png)
+![](./Imgs/Gantt_team1.png)
 
 To see the original Gantt Chart, visit the following link:
 
