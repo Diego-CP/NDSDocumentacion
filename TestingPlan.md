@@ -544,41 +544,31 @@ The tests performed will use a standardized format to record their results in or
 
 | ID | Description | Date | Input(s) | Current Output(s) | Expected Output(s) | Pass/Fail |
 | --- | --- | --- | --- | --- | --- | --- |
-|
-|
-|
+||||||||
 
 **White box**
 
 | ID | Description | Date | File | Line num(s) | Input(s) | Current Output(s) | Expected Output(s) | Pass/Fail |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|
-|
-|
+||||||||||
 
 **Integration**
 
 | ID | Description | Date | Modules tested | Input(s) | Current Output(s) | Expected Output(s) | Pass/Fail |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|
-|
-|
+|||||||||
 
 **User Acceptance Tests**
 
 | ID | Description | Date | Version Shown | PO Feedback |
 | --- | --- | --- | --- | --- |
-|
-|
-|
+||||||
 
 **Route Tests**
 
 | ID | Description | Date | Version used | Steps | Current Step Results | Expected Step Results | Pass/Fail |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|
-|
-|
+|||||||||
 
 # 6. Conclusions
 
