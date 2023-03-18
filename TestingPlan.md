@@ -425,11 +425,9 @@ This List is tentative and may be subject to change:
 | **ESTIMATE** |||
 | --- | --- | --- |
 | Project | _ **AutoMart** _ | Date: 13/03/2023 |
-|
-| **RESULTS** ||
+| **RESULTS** |||
 | **TOTAL** | Mins | 81,600 |
-|| Hrs | 1,360 |
-|
+|| Hrs | 1,360 ||
 | **N°** | **Functionality** | **Estimation (MD)** |
 | 1 | Landing Page | 10 MD |
 | 2 | Registration | 12 MD |
